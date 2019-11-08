@@ -4,14 +4,16 @@ using ColombianFood.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ColombianFood.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191108120324_addMenuItem6ToDatabase")]
+    partial class addMenuItem6ToDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,6 +60,8 @@ namespace ColombianFood.Web.Data.Migrations
                     b.Property<string>("Spicyness");
 
                     b.Property<int>("SubCategoryId");
+
+                    b.Property<int>("SubcategoryId");
 
                     b.HasKey("Id");
 
