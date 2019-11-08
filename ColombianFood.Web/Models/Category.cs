@@ -11,8 +11,7 @@ namespace ColombianFood.Web.Models
         [Required]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "The field {0} is required")]
-        [MaxLength(50, ErrorMessage = "The maximun length for filed {0} is {1} characters")]
+        [Required]
         [Display(Name="Category Name")]
         public string Name { get; set; }
 
